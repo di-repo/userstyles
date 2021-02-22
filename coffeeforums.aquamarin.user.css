@@ -1,0 +1,157 @@
+/* ==UserStyle==
+@name           Coffeeforums aquamarine dark
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Dimitar Ivanov
+@preprocessor   less
+@var color headingTextColor "Heading Text Color" #cdd
+@var color linkColor        "Link color"         #8cc
+@var color bodyTextColor    "Body text color"    #abb
+@var color warnRedColor     "Warning red color"  #9d0217
+==/UserStyle== */
+
+@-moz-document domain("coffeeforums.bg") {
+    .fd_dark {
+        // links styling
+        .topictitle,
+        .forumtitle {
+            color: @headingTextColor;
+            font-weight: 400;
+        }
+        
+        a,
+        .postlink {
+            color: @headingTextColor;
+        }
+        .username-coloured[style*="color: #7F9A65;"] {
+            color: @linkColor !important;
+        }
+        .profile_widget_info li a {
+            position: relative;
+            padding: 0;
+        }
+        .profile_widget_info {
+            margin-left: 15px;
+        }
+        li.row.reported,
+        p.post-notice,
+        .rules {
+            background-color: #052737 !important;
+            border-left-color: #0d587b;
+        }
+        div.rules a {
+            color: @headingTextColor !important;
+        }
+        .global_unread::before,
+        .global_unread_mine::before,
+        .announce_unread::before,
+        .announce_unread_mine::before,
+        .forum_unread::before,
+        .forum_unread_subforum::before,
+        .sticky_unread::before,
+        .sticky_unread_mine::before,
+        .pm_unread::before,
+        .topic_unread::before,
+        .topic_unread_mine::before,
+        .topic_unread_hot::before,
+        .topic_unread_hot_mine::before {
+            border: 1px solid @linkColor !important;
+            color: @linkColor !important;
+        }
+        .global_unread_locked::before,
+        .global_unread_locked_mine::before,
+        .announce_unread_locked::before,
+        .announce_unread_locked_mine::before,
+        .forum_unread_locked::before,
+        .sticky_unread_locked::before,
+        .sticky_unread_locked_mine::before,
+        .topic_unread_locked::before,
+        .topic_unread_locked_mine::before {
+            border: 1px solid @warnRedColor !important;
+            color: @warnRedColor !important;
+        }
+        dl a.row-item-link {
+            width: 32px;
+            height: 32px;
+            top: 7px;
+            left: 12px;
+            margin: 0;
+        }
+        .navbar a {
+            color: @linkColor;
+        }
+        a.header-avatar span::after {
+            padding-top: 1px;
+        }
+        .header-avatar .username-coloured[style*="color: #7F9A65;"] {
+            color: #fff !important;
+            text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+        }
+        h2,
+        .panel-container h2,
+        .tabs .activetab > a,
+        .tabs .activetab > a:hover,
+        .tabs .tab a:hover,
+        .navigation .active-subsection a,
+        .navigation .active-subsection a:hover,
+        .navigation a:hover,
+        .panel-container,
+        label:hover,
+        fieldset dl:hover dt label,
+        dl.faq dt,
+        h3,
+        .content h2,
+        .panel h2,
+        fieldset.polls dl.voted,
+        .button .icon,
+        .inputbox,
+        textarea,
+        .message-box textarea,
+        .panel-container table.table1 thead th,
+        a.button1,
+        input.button1,
+        input.button3,
+        a.button2,
+        input.button2,
+        a.button1:hover,
+        input.button1:hover,
+        a.button2:hover,
+        input.button2:hover,
+        input.button3:hover,
+        .postbody .content,
+        .pagination li a,
+        select,
+        .button .icon,
+        .button-secondary,
+        .global_read_mine::after,
+        .global_read_locked_mine::after,
+        .global_unread_mine::after,
+        .global_unread_locked_mine::after,
+        .announce_read_mine::after,
+        .announce_read_locked_mine::after,
+        .announce_unread_mine::after,
+        .announce_unread_locked_mine::after,
+        .sticky_read_mine::after,
+        .sticky_read_locked_mine::after,
+        .sticky_unread_mine::after,
+        .sticky_unread_locked_mine::after,
+        .topic_read_mine::after,
+        .topic_read_hot_mine::after,
+        .topic_unread_mine::after,
+        .topic_unread_hot_mine::after,
+        .topic_read_locked_mine::after,
+        .topic_unread_locked_mine::after,
+        .dropdown-extended .header,
+        .dropdown-extended .footer,
+        .pagination li.ellipsis span,
+        .icon.icon-black,
+        a:hover .icon.icon-black,
+        .minitabs a:hover,
+        .minitabs .activetab > a,
+        .minitabs .activetab > a:hover,
+        li.row strong {
+            color: @bodyTextColor !important;
+        }
+    }
+}
